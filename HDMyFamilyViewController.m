@@ -192,6 +192,30 @@
             [[DataEngine sharedDataEngine] reqAsyncHttpPost:self urlStr:baseUrl userInfo:totalParamDic withReqTag:2];
         }
         
+        else
+        {
+//            NSString * msgstr;
+//            if ([relationName length] == 0) {
+//                msgstr = @"关系不能为空！";
+//            }
+//            if ([phoneNum length] == 0) {
+//                msgstr = @"手机号不能为空！";
+//            }
+//            
+//            
+//            UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:msgstr delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//            [alertView show];
+            UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"添加手机号码" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+            [alertView setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
+            [[alertView textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeDefault];
+            [[alertView textFieldAtIndex:0] setPlaceholder:@"关系"];
+            [[alertView textFieldAtIndex:1] setPlaceholder:@"手机号码"];
+            [[alertView textFieldAtIndex:1] setKeyboardType:UIKeyboardTypeNumberPad];
+            [[alertView textFieldAtIndex:1] setSecureTextEntry:NO];
+            
+            [alertView show];
+        }
+        
     }
     
    // NSLog(@"buttonind =%ld,%@",buttonIndex,[alertView textFieldAtIndex:0].text);

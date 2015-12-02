@@ -44,7 +44,10 @@
     [totalParamDic setObject:[NSString stringWithFormat:@"%d",self.pages] forKey:@"page"];
     [totalParamDic setObject:[NSString stringWithFormat:@"%d",self.doctorLevel] forKey:@"level"];
     [totalParamDic setObject:[NSString stringWithFormat:@"%@",self.doctorServices] forKey:@"services"];
-    [totalParamDic setObject:[NSString stringWithFormat:@"%d",[[DataEngine sharedDataEngine].selectedCityId intValue]] forKey:@"regionId"];
+    
+    NSLog(@"reinId =%d",[[DataEngine sharedDataEngine].selectedRegionId intValue]);
+    
+    [totalParamDic setObject:[NSString stringWithFormat:@"%d",[[DataEngine sharedDataEngine].selectedRegionId intValue]] forKey:@"regionId"];
 //        [totalParamDic setObject:[NSString stringWithFormat:@"%d",1] forKey:@"regionId"];
     
     // 发送数据

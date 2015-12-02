@@ -43,7 +43,7 @@
     [self.programeLable setTextColor:[UIColor lightGrayColor]];
     [self.programeLable setFont:[UIFont systemFontOfSize:18.0]];
     
-    [self.programeLable setText:@"当前版本1.0.2"];
+    [self.programeLable setText:@"当前版本1.0.6"];
     
     [self.view addSubview:self.programeLable];
 }
